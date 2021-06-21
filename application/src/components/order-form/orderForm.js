@@ -19,9 +19,15 @@ class OrderForm extends Component {
     }
   }
 
+
   componentDidMount() {
     if (!this.props.auth.email) {
       window.location = "/login"
+
+    menuItemChosen(event) {
+        
+        this.setState({order_item: event.target.value });
+
     }
   }
 
